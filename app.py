@@ -5,12 +5,15 @@ import pandas as pd
 excel_file = 'data.xlsx'
 df = pd.read_excel(excel_file)
 
+import streamlit as st
+
+
 def add_bg_from_url():
     st.markdown(
          f"""
          <style>
          .stApp {{
-             background-image: url("https://unsplash.com/photos/die-cast-car-collection-on-rack-JBrfoV-BZts");
+             background-image: url("https://images.unsplash.com/photo-1515281239448-2abe329fe5e5?q=80&w=1793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
              background-attachment: fixed;
              background-size: cover
          }}
@@ -22,8 +25,24 @@ def add_bg_from_url():
 
 add_bg_from_url()
 
+import streamlit as st
 
-st.markdown("<h1 style='color: red;'>Find My Car from Hari's Collections</h1>", unsafe_allow_html=True)
+import streamlit as st
+import streamlit as st
+
+# Define the background color, text color, text content, and text style
+background_color = "white"
+text_color = "red"
+text_content = "Find My Car from Hari's Collections"
+text_style = "font-size: 24px; font-weight: bold; text-align: center;"
+text_box_height = "50px"  # Adjust the height as needed
+
+# Define the CSS styles for the smaller white textbox with red letters and text style
+css_style = f"background-color: {background_color}; color: {text_color}; padding: 10px; height: {text_box_height};"
+
+# Use st.markdown to display the styled text
+st.markdown(f'<div style="{css_style}"><p style="{text_style}">{text_content}</p></div>', unsafe_allow_html=True)
+
 
 # Create a search box
 search_query = st.text_input("Enter the car name:")
