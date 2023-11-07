@@ -1,14 +1,13 @@
-import streamlit as st
 import pandas as pd
+import streamlit as st
 
 # Read the Excel file
 excel_file = 'data.xlsx'
 df = pd.read_excel(excel_file)
 
-import streamlit as st
-
 
 def add_bg_from_url():
+
     st.markdown(
          f"""
          <style>
@@ -25,10 +24,6 @@ def add_bg_from_url():
 
 add_bg_from_url()
 
-import streamlit as st
-
-import streamlit as st
-import streamlit as st
 
 # Define the background color, text color, text content, and text style
 background_color = "white"
@@ -49,8 +44,6 @@ search_query = st.text_input("Enter the car name:")
 
 # Filter the DataFrame based on the search query
 filtered_df = df[df['Name'].str.contains(search_query, case=False, na=False)]
-
-import streamlit as st
 
 # Display the filtered results with custom width and height
 st.dataframe(filtered_df, width=400, height=0)
